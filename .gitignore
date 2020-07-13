@@ -1,0 +1,8 @@
+node_modules/
+npm-debug.log
+test/test-sap-ftp/*
+config/local.*
+coverage/
+dist/
+.nyc_output/
+newrelic_agent.log

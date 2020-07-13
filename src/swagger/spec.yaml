@@ -1,0 +1,9 @@
+openapi: '3.0.3'
+
+tags: 
+  - name: tokens
+    description: Endpoints that deal with payments
+  - name: authorization
+    description: Endpoints that deal with authorization and access control
+  - name: admin
+    description: Endpoints that deal with adminstrative status and control

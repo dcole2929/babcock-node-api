@@ -1,0 +1,10 @@
+[ignore]
+.*/build/.*
+.*/coverage/.*
+.*/locales/.*
+.*/migrations/.*
+.*/seeds/.*
+.*/tools/.*
+
+[options]
+esproposal.export_star_as=enable
