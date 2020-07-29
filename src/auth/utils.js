@@ -17,7 +17,7 @@ export const setup = () => {
 
 export const signToken = user =>
   jwt.sign({ data: user }, process.env.JWT_SECRET, {
-    expiresIn: 604800
+    expiresIn: 604800,
   });
 
 export const hashPassword = async password => {

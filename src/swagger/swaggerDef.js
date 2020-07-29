@@ -1,4 +1,3 @@
-import url from 'url';
 import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
@@ -7,8 +6,8 @@ import pkg from '../../package.json';
 
 const loadYaml = file => {
   const filePath = path.resolve(path.join(__dirname, file));
-  return yaml.safeLoad(fs.readFileSync(filePath, 'utf8')); 
-}
+  return yaml.safeLoad(fs.readFileSync(filePath, 'utf8'));
+};
 
 export default Object.assign(
   {
@@ -17,12 +16,12 @@ export default Object.assign(
       version: pkg.version,
       description: pkg.description,
       contact: {
-        name: pkg.author
+        name: pkg.author,
       },
       license: {
-        name: pkg.license
-      }
-    }
+        name: pkg.license,
+      },
+    },
   },
   loadYaml('./spec.yaml')
 );

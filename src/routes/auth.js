@@ -16,16 +16,16 @@ const router = express.Router();
  *      required: true
  *      content:
  *        application/x-www-form-urlencoded:
- *        schema:
- *          type: object
- *          properties:
- *            email:
- *              type: string
- *            password:
- *              type: string
- *        required:
- *          - email
- *          - password
+ *          schema:
+ *            type: object
+ *            properties:
+ *              email:
+ *                type: string
+ *              password:
+ *                type: string
+ *            required:
+ *              - email
+ *              - password
  *    responses:
  *      '200':
  *        description: hello world
@@ -60,29 +60,29 @@ router.post('/login', async (req, res) => {
 
 /**
  * @swagger
- * /register
+ * /register:
  *  post:
  *    description: register a new user
  *    requestBody:
  *      required: true
  *      content:
  *        application/x-www-form-urlencoded:
- *        schema:
- *          type: object
- *          properties:
- *            firstName:
- *              type: string
- *            lastName:
- *              type: string
- *            email:
- *              type: string
- *            password:
- *              type: string
- *        required:
- *          - firstName
- *          - lastName
- *          - email
- *          - password
+ *          schema:
+ *            type: object
+ *            properties:
+ *              firstName:
+ *                type: string
+ *              lastName:
+ *                type: string
+ *              email:
+ *                type: string
+ *              password:
+ *                type: string
+ *            required:
+ *              - firstName
+ *              - lastName
+ *              - email
+ *              - password
  *    responses:
  *      '200':
  *        description: hello world
@@ -101,7 +101,7 @@ router.post('/register', async (req, res) => {
       firstName,
       lastName,
       email,
-      password: await hashPassword(password)
+      password: await hashPassword(password),
     })
   );
 

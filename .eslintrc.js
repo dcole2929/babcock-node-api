@@ -11,6 +11,7 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error', prettierOptions],
     'flowtype/define-flow-type': 1,
-    'max-len': ["error", { "code": 120 }]
+    'max-len': ['error', { code: 120 }],
+    'prefer-object-spread': 0,
   },
 };

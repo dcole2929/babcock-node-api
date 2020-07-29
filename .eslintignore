@@ -1,13 +1,10 @@
 !.gitkeep
 local-dev.json
 tmp*
-**/.vscode
+# **/.vscode
 
 # Coverage Reports
 coverage/**
-
-# Dependency directory
-node_modules
 
 # OS metadata
 **/.DS_Store
@@ -15,11 +12,14 @@ node_modules
 # Ignore built es6 files
 dist/**/*
 
+## ignore sqllite
+*.sqlite3
+
 *.aes
 *.env
 
-.nyc_output/
+newrelic_agent.log
 npm-debug.log
 config/local.*
 
-.eslintcache
+# \"!**/.*\" ."

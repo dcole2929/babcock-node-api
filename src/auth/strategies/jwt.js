@@ -10,7 +10,7 @@ export const strategy = () => {
   const strategyOptions = {
     jwtFromRequest: req => req.cookie.jwt,
     secretOrKey: process.env.JWT_SECRET,
-    passReqToCallback: true
+    passReqToCallback: true,
   };
 
   const verifyCallback = async (req, jwtPayload, cb) => {

@@ -25,10 +25,10 @@ export default async () => {
 
   const app = Object.assign(express(), {
     pkgname: pkg.name,
-    version: pkg.version
+    version: pkg.version,
   });
 
-  app.use(urlencoded({ extended: false }));
+  app.use(urlencoded({ extended: true }));
   app.use(text());
   app.use(json());
   app.use(cookieParser());
@@ -36,7 +36,7 @@ export default async () => {
 
   const specs = swaggerJSDoc({
     swaggerDefinition: swaggerDef,
-    apis: ['./src/routes/*.js']
+    apis: ['./src/routes/*.js'],
   });
 
   app.use('/docs', swaggerUi.serve, swaggerUi.setup(specs));
@@ -44,7 +44,7 @@ export default async () => {
   await new OpenApiValidator({
     apiSpec: specs,
     validateRequests: true,
-    validateResponses: true
+    validateResponses: true,
   }).install(app);
 
   app.use('/', routes);
@@ -59,7 +59,7 @@ export default async () => {
     // format error
     res.status(err.status || 500).json({
       message: err.message,
-      errors: err.errors
+      errors: err.errors,
     });
   });
 

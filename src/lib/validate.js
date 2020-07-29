@@ -1,3 +1,3 @@
 export default {
-  email: /^\S+@\S+\.\S+$/
+  email: /^\S+@\S+\.\S+$/,
 };
